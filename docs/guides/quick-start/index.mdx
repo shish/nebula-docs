@@ -83,6 +83,10 @@ This will create files named `ca.key` and `ca.cert` in the current directory. Th
 sensitive** file you'll create, because it is the key used to sign the certificates for individual nebula hosts. Please
 store this file somewhere safe, preferably with strong encryption.
 
+By default, the CA certificate will expire after 1 year, and client certificates will expire when the CA certificate
+does. You can change the duration of both types of certificate with the `-duration` flag, though note that a client
+certificate can never last longer than the CA one.
+
 ## Building a Nebula network
 
 ### Establishing a Lighthouse
